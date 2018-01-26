@@ -1,0 +1,88 @@
+CableDirect Homework 2
+Form1.cs Code.
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CableDirectHW2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void extbtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void calbtn_Click(object sender, EventArgs e)
+        {
+            int amount = 0, totaldue = 0;
+            if (radioButton1_CheckedChanged)
+            {
+                amount = 34.50;
+            } else if (radbtn_CheckedChanged)
+            {
+                amount = 96.5;
+            }
+            totaldue = amount + calculateExtra();
+            txtprice.Text = totaldue.ToString("C");
+        }
+
+        private int calculateExtra()
+        {
+            int extra = 0;
+            if (textBox1_TextChanged)
+            {
+                extra = 50;
+            } else if (textBox2_TextChanged)
+            {
+                extra = 4;
+            } else if (textBox4_TextChanged)
+            {
+                extra = 5;
+            }
+            return extra;
+        }
+
+        private void radbtn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

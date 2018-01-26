@@ -1,0 +1,127 @@
+//Homework 4 Part I Temp Conversion Program
+
+func fahrenheitToCelsius(fahrenheitValue : Double) -> Double {
+  var result : Double
+
+  result = (((fahrenheitValue - 32) * 5) / 9)
+
+  return result
+}
+
+var outdoorTemperatureInFahrenheit = 88.2
+var outdoorTemperatureInCelsius = fahrenheitToCelsius
+	(outdoorTemperatureInFahrenheit)
+
+func celsiusToFahrenheit(celsiusValue: Double) -> {
+	var result : Double
+	
+	result = (((celsiusValue *) / 5) + 32)
+	
+	return result
+}
+
+outdoorTemperatureInFahrenheit = celsiusToFahrenheit
+	(outdoorTemperatureInCelsius)
+
+func buildASentence(subject : String, verb : String, noun : String) -> String	
+	{
+	return subject + " " + verb + " " + noun + "!"
+}
+
+buildASentence("Outdoor Temperature", "is", "Plesant" )
+buildASentence("I", "enjoy", "it!")
+
+//Homework 4 Part II Grade Calculation
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Gradingapplicationproject
+{
+    public partial class Form1 : Form
+    {
+        string FinalGrade = "";
+        int projgrade = 0;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            if (txtProjectgrade.Text.Trim() == "")
+            {
+                lblProjectgrade.ForeColor = Color.Red;
+            } else
+            {
+                projgrade = Convert.ToInt16(txtProjectgrade.Text);
+            }
+            
+
+            int projgrade = Convert.ToInt16(txtAssignment1.Text);
+            int assign1 = Convert.ToInt16(txtAssignment2.Text);
+            int exam1 = Convert.ToInt16(txtExam1.Text);
+            int test = Convert.ToInt16(txtExam2.Text);
+    
+            double numGrade = (projgrade * .40) + (assign1 * .15) + (exam1 * .20) + (test * .25);
+            FinalGrade.Text = numGrade.ToString();
+
+            if (numGrade >=90 && numGrade <=100) {
+                FinalGrade = "A";
+            } else if (numGrade >= 80 && numGrade < 90)
+            {
+                FinalGrade = "B";
+            } else if (numGrade >= 70 && numGrade < 80)
+            {
+                FinalGrade = "C";
+            } else if (numGrade >= 60 && numGrade < 70)
+            {
+                FinalGrade = "D";
+            } 
+            FinalGrade.Text = FinalGrade;
+        }
+
+        private void txtFinalGrade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtprojgrade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAssignment1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtExam1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtExam2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTest_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
